@@ -1,0 +1,286 @@
+.student-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.student-main {
+  flex: 1;
+  padding: 32px;
+  margin-left: 25px;
+}
+
+/* Header */
+
+.profile-page-header {
+  margin-bottom: 28px;
+}
+
+.profile-page-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.profile-page-header p {
+  margin-top: 7px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Profile Overview */
+
+.profile-overview {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 26px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-main-info {
+  flex: 1;
+}
+
+.profile-main-info h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #111827;
+}
+
+.profile-main-info p {
+  margin: 5px 0 10px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.student-role {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-profile-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 10px 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.edit-profile-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Cards */
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.profile-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 17px;
+}
+
+/* Personal Details */
+
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 18px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:nth-child(odd) {
+  border-right: 1px solid #f0f0f0;
+}
+
+.detail-label {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Statistics */
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 22px;
+}
+
+.profile-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  font-size: 21px;
+}
+
+.profile-stat > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-label {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Security */
+
+.security-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.security-row:last-child {
+  border-bottom: none;
+}
+
+.security-row strong {
+  display: block;
+  color: #111827;
+  font-size: 14px;
+}
+
+.security-row p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.change-password-btn {
+  padding: 9px 15px;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.change-password-btn:hover {
+  background: #f9fafb;
+}
+
+.account-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .student-main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .profile-overview {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .edit-profile-btn {
+    width: 100%;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item:nth-child(odd) {
+    border-right: none;
+  }
+
+  .security-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
